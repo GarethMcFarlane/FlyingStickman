@@ -1,0 +1,71 @@
+----------------------------------------BaseCodeB README----------------------------------------------------
+Place game.config in the same directory as the program is executed from.
+
+Flappy Bird sprites (C) Dong Nguyen and .GEARS STUDIOS 2013.
+
+Extensions
+----------
+1. Animations: In the config file, the "Sprites" key under the [Stickman] section contains the paths to each frame of the character sprite separated by spaces. The "SpriteDuration" is the duration of each frame in milliseconds.
+
+2. Pause Screen: Press ESC to pause/unpause the game. In the confitrag file, set the "PauseScreen" key under the [Game] section to "off" to turn off this extension.
+
+3. Day/Night Cycle: The background will darken and brighten as time progresses. In the config file, the "DayDuration" key under the [Background] section is the number of milliseconds that it takes to go from day to night back to day. Set to 0 to disable the effect (day time forever).
+
+-----------------------------------------------------------------------------------------------------------
+
+
+All config variables can be put in or left out.
+If Some left out you will get a message saying default values are used
+Obstacles will be read in order: Obstacle1, Obstacle2 etc as detailed below and must have a NextObstacle= line
+If an Obstacle is missing in order or NextObstacle= is missing, all higher order obstacles wont be read
+Example Config like below but without comments:
+---------------------------------------------------
+[Game]
+FrameRate=30			//default 30
+PauseScreen=on			//can be off, default on
+SafetyMode=on			//can be off, default off
+
+[Background]
+Sprite=:/resources/background.png
+Width=500				// default twice background image width
+Height=512				//default background height
+DayDuration=6000		//default 60000
+
+[Stickman]
+Size=tiny				//default normal
+XOffset=10				//default 0 
+XVelocity=10.0			//default 10.0 -limits -50,50
+Sprites=:/resources/flap_up.png :/resources/flap_down.png
+SpriteDuration=250		//default 300
+Jumps=3					//default 1
+
+[Obstacle1]
+Shape=circle			//default rectangle
+NextObstacle = 300		//default 
+StartY = 0				//default 0
+Colour = 0				//defualt black
+Radius = 500			//default 10
+
+[Obstacle2]
+Shape=rectangle
+NextObstacle=200
+StartY = 0		
+Colour=#ff0000
+Height=1				//default 50
+Width=100				//default 50
+
+[Obstacle3]
+Shape=rectangle
+NextObstacle = 100
+Colour = 0
+Height = 100
+Width = 100
+
+[Obstacle4]
+Shape=triangle
+NextObstacle = 300
+StartY = 0
+Colour=#ff0000
+Height=1
+Width=100
+----------------------------

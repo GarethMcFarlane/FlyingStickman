@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/">
+        <file>resources/flap_down.png</file>
+        <file>resources/flap_up.png</file>
+        <file>resources/paused.png</file>
+        <file>resources/background.png</file>
+        <file>resources/checkpoint.gif</file>
+        <file>resources/tiny.png</file>
+        <file>resources/giant.png</file>
+        <file>resources/large.png</file>
+        <file>resources/normal.png</file>
+        <file>resources/explosion.gif</file>
+    </qresource>
+</RCC>
